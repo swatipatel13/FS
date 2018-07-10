@@ -1,0 +1,25 @@
+{
+  "name": "git_node",
+  "version": "1.0.0",
+  "description": "Learn GIT Node",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "D:\\ds_pro\\.git",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "D:\\ds_pro\\.git"
+  },
+  "author": "Swati",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.14.3"
+  }
+}
