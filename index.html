@@ -91,6 +91,81 @@
         </div>
     </div>
 
+    <!--Reseve Table Form Modal Code-->
+
+    <div id="frmid" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-md-2 ">
+                                <label for="firstname" class=" col-form-label">Number of Guests</label>
+                            </div>
+                            <div class="col-md-10 form-inline">
+
+                                <input type="radio" class="form-control" style="margin-right: -3px;" id="nog1" name="nog" placeholder="Guest Name" value="1">
+                                <label for="nog1" class="col-md-1 col-form-label">1</label>
+
+                                <input type="radio" class="form-control" id="nog2" name="nog" placeholder="Guest Name" value="2">
+                                <label for="nog2" class="col-md-1 col-form-label">2</label>
+
+                                <input type="radio" class="form-control" id="nog3" name="nog" placeholder="Guest Name" value="3">
+                                <label for="nog3" class="col-md-1 col-form-label">3</label>
+
+                                <input type="radio" class="form-control" id="nog4" name="nog" placeholder="Guest Name" value="4">
+                                <label for="nog4" class="col-md-1 col-form-label">4</label>
+
+                                <input type="radio" class="form-control" id="nog5" name="nog" placeholder="Guest Name" value="5">
+                                <label for="nog5" class="col-md-1 col-form-label">5</label>
+
+                                <input type="radio" class="form-control" id="nog6" name="nog" placeholder="Guest Name" value="6">
+                                <label for="nog6" class="col-md-1 col-form-label">6</label>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="datetime" class="col-md-2 col-form-label">Section</label>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="datetime" class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="form-group row offset-2 ">
+                            <button type="button" class="btn btn-primary ">Reserve</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -106,8 +181,9 @@
                 <div class="col-6 col-sm align-self-center">
                     <button type="button" class="btn btn-block btn-warning">
                         <!--a href="#frmid" style="color: black;">Reserve Table</a-->
-                        <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                            data-placement="bottom" href="#reserveform">Reserve Table</a>
+                        <!--a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"-->
+                        <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#frmid" data-placement="bottom"
+                            href="#reserveform">Reserve Table</a>
                     </button>
                 </div>
 
@@ -128,18 +204,20 @@
                                     <span class="badge badge-danger">HOT</span>
                                     <span class="badge badge-pill badge-default">$4.99</span>
                                 </h2>
-                              
+
                             </div>
                         </div>
                         <div class="carousel-item">
-                                <img class="d-block img-fluid" src="img/buffet.png" alt="Weekend">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h2>Weekend Grand Buffet
-                                        <span class="badge badge-danger">New</span>
-                                        
-                                    </h2>
-                                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                                </div>
+                            <img class="d-block img-fluid" src="img/buffet.png" alt="Weekend">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet
+                                    <span class="badge badge-danger">New</span>
+
+                                </h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
+                                    appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft
+                                    drinks. All for just $19.99 per person </p>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             . . .
@@ -156,6 +234,19 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <!--div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div-->
+
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
+                    </button>
+
                 </div>
             </div>
         </div>
@@ -348,6 +439,33 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!--script>
+            $(document).ready(function(){
+                $("#mycarousel").carousel( { interval: 2000 } );
+                $("#carousel-pause").click(function(){
+                    $("#mycarousel").carousel('pause');
+                });
+                $("#carousel-play").click(function(){
+                    $("#mycarousel").carousel('cycle');
+                });
+            });
+        </script-->
+
+        <script>
+            $("#carouselButton").click(function () {
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#mycarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                    $("#mycarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');
+                }
+            });
+        </script>
         <script>
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
